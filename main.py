@@ -8,15 +8,15 @@ import numpy as np
 # 環境と agent を用意
 env = gym.make('EasyMaze-v0')
 # env = gym.make('CartPole-v0')
-agent = agents.RandomAgent(env)
-# agent = agents.RulebaseAgent(env)
+# agent = agents.RandomAgent(env)
+agent = agents.RulebaseAgent(env)
 # agent = agents.TableQAgent(env)
 # agent = agents.DQNAgent(env)
 
 
 # 描画設定
 # train時・test時に各 step を描画するかどうか
-prints_detail = {'train': False, 'test': False}
+prints_detail = {'train': True, 'test': True}
 # 何 episode ごとに統計情報を出力するか
 every_print_statistics = {'train': 10, 'test': 10}
 # 描画モード
