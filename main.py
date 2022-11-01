@@ -9,8 +9,8 @@ import numpy as np
 env = gym.make('EasyMaze-v0')
 # env = gym.make('CartPole-v0')
 # agent = agents.RandomAgent(env)
-agent = agents.RulebaseAgent(env)
-# agent = agents.TableQAgent(env)
+# agent = agents.RulebaseAgent(env)
+agent = agents.TableQAgent(env)
 # agent = agents.DQNAgent(env)
 
 
