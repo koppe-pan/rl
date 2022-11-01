@@ -57,7 +57,6 @@ class TableQAgent(abstract_agent.Agent):
         if self.last_obs is not None:
             assert(self.last_action is not None)
             last_obs_key, obs_key = [self.observation_to_key(o) for o in [self.last_obs, obs]]
-            print(self.q_table)
 
             # 見たことないようなら辞書に追加
             if last_obs_key not in self.q_table:

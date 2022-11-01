@@ -89,4 +89,6 @@ for interact_mode in ['train', 'test']:  # 一周目: train, 二周目: test
     print(interact_mode, 'finished.')
 
 for interact_mode in ['train', 'test']:  # 一周目: train, 二周目: test
-    print(interact_mode + ':' + str(np.mean(n_steps[interact_mode])))
+    print(interact_mode + ': ' + str(np.mean(n_steps[interact_mode])))
+print('train first 10: ' + str(np.mean(n_steps['train'][0:10])))
+print('train last 10: ' + str(np.mean(n_steps['train'][90:100])))
