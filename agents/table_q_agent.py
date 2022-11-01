@@ -34,7 +34,8 @@ class TableQAgent(abstract_agent.Agent):
         return self.select_action(obs)
 
     def act(self, obs):
-        return self.select_action(obs)
+        obs_key = self.observation_to_key(obs)
+        return np.argmax(self.q_table[obs_key])
 
     def stop_episode_and_train(self, obs, reward, done=False):
         self.train(obs, reward)
